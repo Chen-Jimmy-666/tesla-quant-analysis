@@ -1,96 +1,88 @@
 # TSLA Quant Analysis 
 
-这是一个我在学习量化投资过程中，从 0 开始构建的第一个完整项目。  
-当前阶段主要聚焦于：**数据获取、基础指标计算、可视化分析**。
+This is my first end-to-end project built from scratch while learning quantitative finance.
 
-后续会逐步扩展到：
-- 简单交易策略
-- 回测系统
-- 因子模型
+At the current stage, the project focuses on:  
+**data collection, basic metrics calculation, and visual analysis**
 
-👉 项目会持续更新，记录我的学习路径和能力提升过程。
+Future extensions will include:
+- Simple trading strategies  
+- Backtesting framework  
+- Factor-based research  
 
----
-
-## 📊 项目内容
-
-基于 TSLA（特斯拉）过去 5 年数据，并对比 S&P 500，完成：
-
-### 数据处理
-- 使用 Yahoo Finance API 获取原始行情数据
-- 数据清洗与对齐（确保 TSLA 与指数可比）
-
-### 收益分析
-- 日收益率 / 对数收益率
-- 累计收益率对比（TSLA vs S&P 500）
-- 年度收益率
-
-### 风险分析
-- 年化波动率（log return）
-- 30 日滚动波动率
-- 最大回撤（Max Drawdown）
-- Sharpe Ratio（RF = 0）
-
-### 可视化（7张图）
-- 股价 + 均线 + 成交量
-- 收益分布（含偏度/峰度）
-- 累计收益对比
-- 波动率变化
-- 年度收益
-- 最大回撤
-- 综合 Dashboard
+👉 This repository will be continuously updated to reflect my learning progress and growing understanding of quantitative research.
 
 ---
 
-## 📈 核心结论（当前版本）
+## 📊 Project Overview
 
-- TSLA 过去 5 年 CAGR ≈ 10.4%，略低于 S&P 500
-- 年化波动率 ≈ 58.8%，约为大盘的 3.5 倍
-- 最大回撤高达 -73.6%
-- Sharpe ≈ 0.17 → 风险回报较差
+Using TSLA (Tesla) price data over the past 5 years, with comparison to the S&P 500, this project covers:
 
-👉 当前结论：  
-TSLA 属于**高波动但风险补偿不足**的资产
+### Data Processing
+- Retrieved historical market data via Yahoo Finance API  
+- Cleaned and aligned data to ensure comparability between TSLA and the index  
 
----
+### Return Analysis
+- Daily returns / log returns  
+- Cumulative return comparison (TSLA vs S&P 500)  
+- Annual returns  
 
-## 🛠 技术栈
+### Risk Analysis
+- Annualized volatility (based on log returns)  
+- 30-day rolling volatility  
+- Maximum drawdown  
+- Sharpe ratio (risk-free rate = 0)  
 
-- Python（核心语言）
-- Pandas / NumPy（数据处理）
-- Matplotlib / Seaborn（可视化）
-- Requests（数据获取）
-
----
-
-## 🤖 开发方式
-
-本项目在开发过程中，结合使用了 Claude Code 进行辅助：
-- 协助代码结构设计
-- 调试问题定位
-- 提升开发效率
-
-👉 重点仍然是：**理解每一步逻辑，而不是简单调用工具**
+### Visualizations (7 charts)
+- Price + moving averages + volume  
+- Return distribution (including skewness & kurtosis)  
+- Cumulative return comparison  
+- Volatility trends  
+- Annual performance  
+- Maximum drawdown  
+- Combined dashboard  
 
 ---
 
-## 🚀 后续计划
+## 📈 Key Findings (Current Version)
 
-- [ ] 加入简单策略（如均线策略）
-- [ ] 实现回测（PnL / Sharpe / Drawdown）
-- [ ] 引入更多因子（动量、波动率等）
-- [ ] 优化代码结构（模块化）
+- TSLA 5-year CAGR ≈ 10.4%, slightly lower than the S&P 500  
+- Annualized volatility ≈ 58.8%, about 3.5× the market  
+- Maximum drawdown reached -73.6%  
+- Sharpe ratio ≈ 0.17 → relatively poor risk-adjusted return  
+
+👉 Current takeaway:  
+TSLA behaves as a **high-volatility asset with insufficient risk compensation**
 
 ---
 
-## 💡 项目目的
+## 🛠 Tech Stack
 
-本项目的核心目标，是从零搭建一个基础的量化分析框架，  
-逐步理解从数据获取 → 指标计算 → 风险评估 → 可视化表达的完整流程。
+- Python (core language)  
+- Pandas / NumPy (data processing)  
+- Matplotlib / Seaborn (visualization)  
+- Requests (data retrieval)  
 
-在当前阶段，我更关注：
-- 每一个指标的计算逻辑及其含义
-- 如何用数据去支持一个投资判断
-- 不同资产之间的风险收益特征差异
+---
 
-👉 项目将持续迭代，后续会扩展至策略、回测及因子研究，作为我进入量化研究领域的长期学习路径。
+## 🤖 Development Approach
+
+This project was developed with assistance from Claude Code for:
+- Structuring code  
+- Debugging issues  
+- Improving development efficiency  
+
+👉 The focus remains on **understanding the logic behind each step**, rather than simply relying on tools.
+
+---
+
+## 💡 Project Objective
+
+The goal of this project is to build an intuitive understanding of quantitative analysis starting from a single asset, rather than just computing financial indicators.
+
+Instead of focusing only on results, I aim to:
+- Transform raw data into interpretable investment insights  
+- Understand the financial meaning and limitations of each metric  
+- Develop a basic framework for evaluating risk and return  
+
+👉 This project will continue to evolve into strategy development, backtesting, and factor research, forming a long-term learning path into quantitative finance.
